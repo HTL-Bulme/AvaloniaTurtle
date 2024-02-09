@@ -1,0 +1,20 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:cc="using:AvaloniaTurtle"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AvaloniaTurtle.MainWindow"
+        Title="AvaloniaTurtle">
+    <StackPanel>
+        <Button Name="fastdraw" Click="Fastdraw_OnClick">Draw Something Fast</Button>
+        <Button Name="refresh" Click="Refresh_OnClick">Draw Something Slow</Button>
+        <Button Name="circle" Click="Circle_OnClick">Draw Circle Fast</Button>
+        <Button Name="circleSlow" Click="CircleSlow_OnClick">Draw Circle Slow</Button>
+        <cc:TurtleControl Name="turtle"
+                          Width="500"
+                          Height="500">
+            
+        </cc:TurtleControl>
+    </StackPanel>
+</Window>
