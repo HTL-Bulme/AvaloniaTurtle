@@ -61,4 +61,34 @@ public partial class MainWindow : Window
         }
         turtle.Start(TurtleSpeed.SLOW);
     }
+
+    private void Triangle_OnClick(object? sender, RoutedEventArgs e)
+    {
+        turtle.Init();
+        DrawLine(300,4);
+        turtle.Right(120);
+        DrawLine(300,4);
+        turtle.Right(120);
+        DrawLine(300,4);
+        turtle.Right(120);
+        turtle.Start(TurtleSpeed.FAST);
+    }
+
+    private void DrawLine(double length, int depth)
+    {
+        if (depth == 0)
+        {
+            turtle.Forward(length);
+        }
+        else
+        {
+            DrawLine(length / 3, depth - 1);
+            turtle.Left(60);
+            DrawLine(length / 3, depth - 1);
+            turtle.Right(120);
+            DrawLine(length / 3, depth - 1);
+            turtle.Left(60);
+            DrawLine(length / 3, depth - 1);
+        }
+    }
 }

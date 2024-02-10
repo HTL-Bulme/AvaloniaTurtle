@@ -42,7 +42,7 @@ class Forward : TurtleCommand
         state.y += distance * state.dir_y;
 
         context.DrawLine(
-            new Pen(Brushes.Black),
+            new Pen(Brushes.Black,2),
             new Point(old_x, old_y),
             new Point(state.x, state.y)
         );
